@@ -6,7 +6,11 @@
 }
 
 /*body*/
-body {font-family:'Roboto', sans-serif;
+body {
+font-family:'Roboto', sans-serif;
+font-size: 14px;
+line-height: 1.71;
+color: #757575;
 }
 
 
@@ -36,8 +40,7 @@ ul { list-style: none; }
 color:var(--accent);
 }
 
-/*не працює активна сторінка*/
-.site-nav .link .current {
+.site-nav .link.current {
 color: var(--accent);
 }
 
@@ -391,49 +394,6 @@ border-radius: 4px;
 background: #F5F4FA;
 color: var(--primary-text-color);
 }
-
-
-.everyonec-middle {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-}
-
-
-.websites-middle {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-}
-
-.applications-middle {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-}
-
-.design-middle {
-font-weight: 500;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-}
-
-.marketing-middle {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
-    }
 
     /*фільтр картинки*/
 .image-tehnokriak {
