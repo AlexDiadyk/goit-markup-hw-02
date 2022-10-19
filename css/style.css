@@ -1,8 +1,12 @@
 :root {
     --accent: #2196F3;
     --primary-text-color: #212121;
-    --tittle-text-p: #757575;
-    --white-color: #FFFFFF;
+    --text-color-white: #FFFFFF;
+    --text-color-gray: #757575;
+    --color-accent-hover: #188ce8;
+    --main-background-color: #FFFFFF;
+    --second-background-color: #2F303A;
+    --third-color-background: #F5F4FA;
 }
 
 /*body*/
@@ -10,13 +14,13 @@ body {
 font-family:'Roboto', sans-serif;
 font-size: 14px;
 line-height: 1.71;
-color: #757575;
+color: var(--main-background-color);
 }
 
 
 /*header*/
 /*навігація*/
-header {background: #FFFFFF;
+header {background: var(--main-background-color);
 }
 
 .logo {
@@ -25,24 +29,24 @@ font-family: 'Raleway', sans-serif;
 font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
-color: #2196F3;
+color: var(--accent);
 }
 
-.logo-studio {color: #212121;}
+.logo-studio {color: var(--primary-text-color);}
 
 .nav {
-background: var(--white-color);
+background: var(--main-background-color);
 }
 
-ul { list-style: none; }
-
-.site-nav .link:hover, .site-nav-link .link:focus {
+.site-nav .link.current,
+.site-nav .link:focus,
+.site-nav .link:hover,
+.contacts .link:focus,
+.contacts .link:hover {
 color:var(--accent);
 }
 
-.site-nav .link.current {
-color: var(--accent);
-}
+ul { list-style: none; }
 
 .nav-studio {
 text-decoration: none;
@@ -77,7 +81,7 @@ font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-color: #757575;    
+color: var(--text-color-gray);    
 }
 
 .tel-header {
@@ -86,13 +90,13 @@ font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-color: #757575;
+color: var(--text-color-gray);
 }
 
 /*main*/
 /*секція рішення*/
 .section-order {
-background: #2F303A;
+background: var(--second-background-color);
 }
 
 .section-decision {
@@ -102,35 +106,32 @@ line-height: 60px;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: var(--white-color);
-}
-
-.button-order {
-font-weight: 700;
-font-size: 16px;
-line-height: 1.87;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.06em;
-
-color: #FFFFFF;
+color: var(--text-color-white);
 }
 
 .button {
+font-family: 'Roboto', sans-serif;
 border:none;
-background:var(--accent);
-color: var(--white-color);
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+/* identical to box height, or 188% */
+cursor: pointer;
+color: var(--text-color-white);
+background: var(--accent);
+  }
 
-}
+.button:focus,
+.button:hover {
+background-color: var(--color-accent-hover);
+  }
 
 /*наші переваги*/
 .advantages-information {
-background: #F5F5F5;
+background: var(--main-background-color);
 }
 
-.test {visibility: hidden
-}
+.visually-hidden { position: absolute; white-space: nowrap; width: 0px; height: 0px; overflow: hidden; border: 0;}
 
 
 .warning {
@@ -139,7 +140,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-color:var(--primary-text-color);
+color: var(--primary-text-color);
 }
 
 .warning-text {
@@ -147,7 +148,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: #757575;
+color:var(--text-color-gray);
 }
 
 .punctuality {
@@ -156,7 +157,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-color: #212121;
+color: var(--primary-text-color);
 }
 
 .punctuality-text {
@@ -164,7 +165,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color:var(--text-color-gray);
 }
 
 .planning {
@@ -181,7 +182,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .technologies {
@@ -198,11 +199,11 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .information {
- background: #F5F5F5;
+ background: var(--main-background-color);
 }
 
 /*чим займаємось*/
@@ -232,7 +233,7 @@ background: url(creative-artist-web-design-with-working-colour-selection-graphic
 /*наша команда*/
 
 .team {
-    background: #F5F4FA;;
+background:var(--third-color-background);
 }
 
 .our-team {
@@ -241,6 +242,10 @@ font-size: 36px;
 line-height: 1.16;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
+}
+
+.background-team {
+background-color: var(--main-background-color);
 }
 
 .demianenko {
@@ -265,7 +270,7 @@ color:var(--tittle-text-p);
 }
 
 .repina {
-    font-weight: 500;
+font-weight: 500;
 background: url(5844.jpg);
 border-radius: 0px;
 }
@@ -283,7 +288,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.18;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .tarasov {
@@ -325,13 +330,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.18;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p); 
+color: var(--text-color-gray); 
 }
 
 /*footer*/
 
 .footer {
-background: #2F303A;
+background: var(--second-background-color);
 }
 .logo-footer {
 text-decoration: none;
@@ -344,7 +349,7 @@ color: var(--accent);
 }
 
 .logo-studio-footer {
-color: #F5F5F5;
+color:var(--text-color-white);
 }
 
 .adress-footer {
@@ -354,7 +359,7 @@ font-style: normal;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color:var(--white-color);
+color: var(--text-color-white);
 }
 
 .mail-footer {
@@ -365,7 +370,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+color: var(--text-color-gray);
 }
 
 .tel-footer {
@@ -376,24 +381,36 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+color: var(--text-color-gray);
 }
 
 /*portfolio*/
 
 .main-portfolio {
-    background: #F5F5F5;
+    background: var(--main-background-color);
 }
 
  /*Фільтр*/
 
 .button-filtr {
 border:none;
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
 background: #F5F4FA;
 color: var(--primary-text-color);
 }
+
+.button-filtr.current {
+color: var(--text-color-white);
+background-color: var(--accent);
+}
+
+.button-filtr:focus,
+.button-filtr:hover {
+color: var(--text-color-white);
+background-color: var(--accent);
+cursor: pointer;}
 
     /*фільтр картинки*/
 .image-tehnokriak {
@@ -413,7 +430,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-poster {
@@ -433,7 +450,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-seafood {
@@ -453,7 +470,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color:var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-prime {
@@ -465,7 +482,7 @@ font-weight: 700;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-color:var(--primary-text-color);
+color: var(--primary-text-color);
 }
 
 .prime-marketing {
@@ -473,7 +490,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-boxes {
@@ -493,7 +510,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-inspiratio {
@@ -513,7 +530,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color:var(--tittle-text-p);
+color:var(--text-color-gray);
 }
 
 .image-limited {
@@ -525,7 +542,7 @@ font-weight: 700;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-color:var(--primary-text-color);
+color: var(--primary-text-color);
 }
 
 .design-limited {
@@ -533,7 +550,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-lab {
@@ -553,7 +570,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color:var(--tittle-text-p);
+color: var(--text-color-gray);
 }
 
 .image-growing {
@@ -573,5 +590,6 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: var(--tittle-text-p);
+color: var(--text-color-gray);
 }
+
